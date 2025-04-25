@@ -16,8 +16,8 @@ const Home = () => {
         <Sidebar />
       </div>
 
-      <main className="flex-1 ml-64 p-8 max-[700px]:ml-0 max-[700px]:p-4">
-        <div className="max-w-6xl ml-auto">
+      <main className="flex-1 p-8 w-[70%] max-[700px]:w-full ml-[20%] max-[700px]:ml-0 max-[800px]:pb-[100px] pb-50">
+        <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
           <section className="relative h-[500px] rounded-3xl overflow-hidden mb-12 shadow-xl">
             <img
@@ -31,9 +31,9 @@ const Home = () => {
                 <p className="text-lg text-purple-100 max-w-xl mb-6">
                   Your comprehensive dashboard for global perfume market analysis and trends.
                 </p>
-                <button className="bg-white/20 hover:bg-white/30 text-white px-6 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 border border-white/30 text-base">
+                <a href="/general" className="bg-white/20 hover:bg-white/30 text-white px-6 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 border border-white/30 text-base inline-block">
                   Explore Dashboard
-                </button>
+                </a>
               </div>
             </div>
           </section>
@@ -96,17 +96,20 @@ const Home = () => {
               { 
                 title: "Women's Fragrances",
                 image: "/images/download (3).jpg",
-                gradient: "from-pink-900 to-pink-600"
+                gradient: "from-pink-900 to-pink-600",
+                link:"/women"
               },
               { 
                 title: "Men's Fragrances",
                 image: "/images/Bleu de Chanel - Deep Blue.jpg",
-                gradient: "from-blue-900 to-blue-600"
+                gradient: "from-blue-900 to-blue-600",
+                link:"/men"
               },
               { 
                 title: "Market Predictions",
                 image: "/images/download.jpg",
-                gradient: "from-yellow-900 to-yellow-600"
+                gradient: "from-yellow-900 to-yellow-600",
+                link:"/predictions"
               }
             ].map((card, index) => (
               <div 
@@ -128,7 +131,7 @@ const Home = () => {
                     {index === 1 && "Access detailed analytics for the men's fragrance segment"}
                     {index === 2 && "Leverage AI-powered predictions to forecast market trends"}
                   </p>
-                  <a href="#" className={`inline-block w-full text-center bg-gradient-to-r ${card.gradient} text-white py-2.5 px-6 rounded-xl text-base transition-all duration-300 hover:opacity-90`}>
+                  <a href={card.link}  className={`inline-block w-full text-center bg-gradient-to-r ${card.gradient} text-white py-2.5 px-6 rounded-xl text-base transition-all duration-300 hover:opacity-90`}>
                     View {index === 2 ? "Predictions" : "Dashboard"}
                   </a>
                 </div>

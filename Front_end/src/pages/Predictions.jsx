@@ -205,9 +205,9 @@ const Predictions = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-100 dark:bg-[#272727]">
-      <Sidebar />
-      <div className="flex-1 p-8 ml-64 pl-16  max-[700px]:ml-0">
+    <div className="flex max-[700px]:flex-col min-h-screen bg-gray-100 dark:bg-[#272727] ">
+      <Sidebar className="z-10 max-[700px]:rounded-xl"/>
+      <div className="flex-1 p-8 w-[70%] max-[700px]:w-full ml-[20%] max-[700px]:ml-0 max-[800px]:pb-[100px] pb-50">
         <div className="relative z-10 bg-white/100 backdrop-blur-lg p-6 rounded-xl dark:bg-[#1e1e1e] dark:text-gray-300">
           <h1 className="text-3xl font-bold text-black mb-2 dark:text-gray-300">Sales Predictions</h1>
           <p className="text-black-100">Analyze and predict perfume sales trends</p>
