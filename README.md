@@ -63,8 +63,7 @@ This project analyzes an e-commerce perfume dataset to create a comprehensive di
 
 ### 5. **Login/Registration**  
 - Registration form: name, email, password  
-- Email verification with manual admin approval  
-- "Forgot password" functionality  
+- Email verification with manual admin approval   
 - Secure backend with Node.js and MongoDB  
 
 ---  
