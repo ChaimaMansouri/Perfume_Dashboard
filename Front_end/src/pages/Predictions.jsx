@@ -103,8 +103,8 @@ const Predictions = () => {
 
     try {
       const url = gender 
-        ? `http://localhost:5000/api/predictions?gender=${gender}`
-        : "http://localhost:5000/api/predictions";
+        ?  `${baseURL}/api/predictions?gender=${gender}`
+        : `${baseURL}/api/predictions`;
       
       const result = await handleFilterChange(url);
       
@@ -134,7 +134,7 @@ const Predictions = () => {
       if (selectedGender) params.append('gender', selectedGender);
       if (brand) params.append('brand', brand);
       
-      const result = await handleFilterChange(`http://localhost:5000/api/predictions?${params.toString()}`);
+      const result = await handleFilterChange(`${baseURL}/api/predictions?${params.toString()}` );
       
       setFilteredData(prev => ({
         ...prev,
@@ -162,7 +162,7 @@ const Predictions = () => {
       if (selectedBrand) params.append('brand', selectedBrand);
       if (type) params.append('type', type);
       
-      const result = await handleFilterChange(`http://localhost:5000/api/predictions?${params.toString()}`);
+      const result = await handleFilterChange(`${baseURL}/api/predictions?${params.toString()}`);
       
       setFilteredData(prev => ({
         ...prev,
