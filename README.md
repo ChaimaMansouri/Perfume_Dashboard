@@ -1,4 +1,4 @@
-🌸 Web Dashboard for Perfume Store
+#🌸 Web Dashboard for Perfume Store
 
 An interactive and responsive web-based dashboard designed to help perfume store owners make data-driven decisions through clear visualizations and intelligent forecasts.
 
@@ -44,7 +44,7 @@ This project analyzes an e-commerce perfume dataset to create a comprehensive di
   - Average price trends
   - Stock availability and sales performance by gender
 
-### 4. Forecasts Page
+### 4.Prediction Page
 - Sales trend predictions using linear regression
 - Trend graphs with confidence intervals
 - Key metrics:
@@ -89,17 +89,16 @@ This project analyzes an e-commerce perfume dataset to create a comprehensive di
 
 ## 📦 Local Project Setup
 
-# Clone repository
-git clone https://github.com/your-username/perfume-dashboard.git
-cd perfume-dashboard
+** Clone repository**
+git clone https://github.com/ChaimaMansouri/Perfume_Dashboard.git
 
-# Install frontend dependencies
+** Install frontend dependencies **
 cd Front_end
 npm install
 
-# Install backend dependencies
+** Install backend dependencies **
 cd ../Back_end
 npm install
 
-# Launch application
+** Launch application
 npm start
