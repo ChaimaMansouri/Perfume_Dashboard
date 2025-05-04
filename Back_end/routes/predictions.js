@@ -4,7 +4,7 @@ const Perfume = require('../models/Perfumes');
 const MLR = require('ml-regression').SimpleLinearRegression;
 
 router.get("/", async (req, res) => {
-  console.log("✅ Received request to /api/predictions");
+  console.log("Received request to /api/predictions");
 
   try {
     const { gender, brand, type } = req.query;
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
     if (type) query.type = type;
 
     const perfumes = await Perfume.find(query).sort({ lastUpdated: 1 });
-    console.log("✅ Successfully fetched perfumes", perfumes.length);
+    console.log(" Successfully fetched perfumes", perfumes.length);
 
     // Extract unique values
     const brands = [...new Set(perfumes.map(p => p.brand))];
@@ -64,7 +64,7 @@ router.get("/", async (req, res) => {
     });
 
   } catch (error) {
-    console.error("❌ Error fetching data:", error);
+    console.error(" Error fetching data:", error);
     res.status(500).json({ 
       error: "Internal server error", 
       details: error.message,

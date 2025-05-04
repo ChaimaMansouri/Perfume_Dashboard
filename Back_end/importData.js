@@ -22,7 +22,7 @@ const importCSV = async (filePath) => {
 
                     results.push(row);
                 } catch (error) {
-                    console.error("❌ Error processing row:", error);
+                    console.error("Error processing row:", error);
                 }
             })
             .on("end", async () => {
@@ -53,7 +53,7 @@ const startImport = async () => {
         console.log("✅ Successfully imported all data!");
         mongoose.connection.close();
     } catch (error) {
-        console.error("❌ Error in the process:", error);
+        console.error(" Error in the process:", error);
         mongoose.connection.close();
     }
 };

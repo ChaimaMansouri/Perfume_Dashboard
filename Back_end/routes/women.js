@@ -7,11 +7,11 @@ const Perfume = require('../models/Perfumes');
  * Women's perfumes statistics endpoint
  */
 router.get("/", async (req, res) => {
-    console.log("✅ Received request to /api/women");
+    console.log(" Received request to /api/women");
   
     try {
       const perfumes = await Perfume.find({ gender: "women" });
-      console.log("✅ Successfully fetched women's perfumes", perfumes.length);
+      console.log(" Successfully fetched women's perfumes", perfumes.length);
   
       // Same analytics structure as general endpoint but filtered for women
       const brands = new Set(perfumes.map(p => p.brand)).size;
@@ -65,7 +65,7 @@ router.get("/", async (req, res) => {
       });
   
     } catch (error) {
-      console.error("❌ Error fetching data:", error);
+      console.error("Error fetching data:", error);
       res.status(500).json({ error: "Internal server error", details: error.message });
     }
   });
